@@ -1,211 +1,480 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sanju A | Portfolio</title>
+    <meta name="theme-color" content="#080b14">
+    <meta name="description" content="Gururaju L - BCA Student and Aspiring Full-Stack Developer from Mandya, Karnataka.">
+    <title>Gururaju L | Developer Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">G<span>.</span>L</a>
 
-            <div class="logo">
-                Sanju A
-            </div>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
+            <a href="#contact" class="nav-cta">Let's Talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </nav>
     </header>
 
+    <main>
+        <!-- Hero -->
+        <section class="hero section container" id="home">
+            <div class="hero-content reveal">
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    BCA Student · Open to Opportunities
+                </div>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
+                <p class="eyebrow">HELLO, WORLD! I'M</p>
 
-        <div class="hero-content">
+                <h1>Gururaju <span class="gradient-text">L.</span></h1>
 
-            <h1>Hello, I'm <span>Sanju A</span></h1>
+                <h2 class="hero-role">
+                    Aspiring <span id="typingText">Full-Stack Developer</span><span class="cursor">|</span>
+                </h2>
 
-            <h2>Full Stack Developer</h2>
+                <p class="hero-description">
+                    I am a BCA student passionate about building modern,
+                    responsive and user-friendly web applications.
+                    I enjoy turning ideas into digital experiences
+                    while learning something new every day.
+                </p>
 
-            <p>
-                I am interested in Web Development, Machine Learning,
-                Artificial Intelligence and Computer Vision.
-            </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Work <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Get In Touch
+                    </a>
+                </div>
 
-            <a href="#contact" class="btn">
-                Contact Me
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                       aria-label="GitHub" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                       aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:lgururaj967@gmail.com"
+                       aria-label="Email" title="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="profile-card">
+                    <div class="profile-top">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                        <span class="profile-label">developer.profile</span>
+                    </div>
+
+                    <div class="profile-image-wrap">
+                        <img
+                            src="profile.jpg"
+                            alt="Gururaju L profile picture"
+                            class="profile-image"
+                            id="profileImage"
+                        >
+                        <div class="profile-fallback" id="profileFallback">GL</div>
+                        <span class="image-status"><i class="fa-solid fa-check"></i></span>
+                    </div>
+
+                    <h3>Gururaju L</h3>
+                    <p class="profile-subtitle">Aspiring Full-Stack Developer</p>
+
+                    <div class="profile-divider"></div>
+
+                    <div class="profile-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Mandya, Karnataka, India
+                    </div>
+                    <div class="profile-detail">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Bachelor of Computer Applications
+                    </div>
+
+                    <div class="code-snippet">
+                        <span class="code-purple">const</span> goal =
+                        <span class="code-green">"Build & Learn"</span>;
+                        <br>
+                        <span class="code-purple">while</span> (learning) {
+                        <br>
+                        &nbsp;&nbsp;createSomethingAmazing();
+                        <br>}
+                    </div>
+                </div>
+
+                <div class="floating-badge badge-code">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Clean Code</span>
+                </div>
+
+                <div class="floating-badge badge-dev">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>Web Development</span>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="fa-solid fa-arrow-down"></i>
             </a>
+        </section>
 
-        </div>
+        <!-- Quick facts -->
+        <section class="stats-section container reveal">
+            <div class="stat-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div><h3>BCA</h3><p>Degree Program</p></div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-code"></i>
+                <div><h3>Web Dev</h3><p>Area of Interest</p></div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <div><h3>Always</h3><p>Learning & Growing</p></div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <div><h3>Mandya</h3><p>Karnataka, India</p></div>
+            </div>
+        </section>
 
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="section">
-
-        <h2>About Me</h2>
-
-        <p>
-            I am a Computer Science graduate with an interest in
-            Full Stack Web Development, Machine Learning and Artificial
-            Intelligence. I enjoy developing applications and solving
-            real-world problems using technology.
-        </p>
-
-    </section>
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="section gray">
-
-        <h2>Technical Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Node.js</div>
-            <div class="skill">Express.js</div>
-            <div class="skill">MongoDB</div>
-            <div class="skill">Python</div>
-            <div class="skill">Java</div>
-            <div class="skill">Machine Learning</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-
-        <h2>Projects</h2>
-
-        <div class="projects-container">
-
-            <div class="project-card">
-
-                <h3>Butterfly Identification using YOLO</h3>
-
-                <p>
-                    A real-time object detection system developed for
-                    identifying butterfly species using the YOLO model.
-                </p>
-
+        <!-- About -->
+        <section class="section container" id="about">
+            <div class="section-heading reveal">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2>About <span class="gradient-text">Me</span></h2>
+                <p>A little about my journey, interests and goals.</p>
             </div>
 
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Learning today. <span class="gradient-text">Building tomorrow.</span></h3>
+                    <p>
+                        I'm Gururaju L, a Bachelor of Computer Applications
+                        student at STG First Grade College, affiliated with
+                        Mandya University.
+                    </p>
+                    <p>
+                        I have a strong interest in web development and
+                        software engineering. I'm working toward becoming
+                        a full-stack developer by strengthening my programming
+                        fundamentals and building practical projects.
+                    </p>
+                    <p>
+                        My goal is to create useful digital products,
+                        collaborate with others and continuously improve
+                        my technical skills.
+                    </p>
 
-            <div class="project-card">
+                    <a href="#contact" class="text-link">
+                        Let's connect <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
 
-                <h3>Blood Cell Detection</h3>
+                <div class="about-info reveal">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+                        <div><span>Full Name</span><h4>Gururaju L</h4></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div><span>Course</span><h4>Bachelor of Computer Applications</h4></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-building-columns"></i></div>
+                        <div><span>College</span><h4>STG First Grade College</h4></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div><span>Location</span><h4>Mandya, Karnataka, India</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <p>
-                    A microscopic image analysis project for detecting
-                    and classifying different types of blood cells.
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">WHAT I'M LEARNING</p>
+                    <h2>My <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies and concepts I'm exploring on my developer journey.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
+                        <h3>HTML5</h3>
+                        <p>Semantic and accessible web structure.</p>
+                        <div class="skill-track"><span style="--level:85%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <h3>CSS3</h3>
+                        <p>Responsive layouts and modern styling.</p>
+                        <div class="skill-track"><span style="--level:75%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div>
+                        <h3>JavaScript</h3>
+                        <p>Interactive interfaces and programming logic.</p>
+                        <div class="skill-track"><span style="--level:60%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon node-icon"><i class="fa-brands fa-node-js"></i></div>
+                        <h3>Node.js</h3>
+                        <p>Exploring backend development and APIs.</p>
+                        <div class="skill-track"><span style="--level:40%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon database-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3>Databases</h3>
+                        <p>Learning data storage and management.</p>
+                        <div class="skill-track"><span style="--level:40%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon git-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and project collaboration.</p>
+                        <div class="skill-track"><span style="--level:55%"></span></div>
+                    </article>
+                </div>
+                <p class="skills-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Skill levels are illustrative. Update them to reflect your actual experience.
                 </p>
+            </div>
+        </section>
 
+        <!-- Projects -->
+        <section class="section container" id="projects">
+            <div class="section-heading reveal">
+                <p class="eyebrow">MY WORK</p>
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <p>A place to showcase projects as you build and learn.</p>
             </div>
 
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-visual visual-one">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span class="project-number">PROJECT 01</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive personal website introducing my background, skills, projects and contact information.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                            <span class="project-status"><i class="fa-solid fa-circle"></i> Customizable</span>
+                        </div>
+                    </div>
+                </article>
 
-            <div class="project-card">
+                <article class="project-card reveal">
+                    <div class="project-visual visual-two">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span class="project-number">PROJECT 02</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span>JavaScript</span><span>CSS</span></div>
+                        <h3>Task Manager</h3>
+                        <p>A task management application concept for organizing daily activities and tracking progress.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                            <span class="project-status"><i class="fa-solid fa-circle"></i> Starter Idea</span>
+                        </div>
+                    </div>
+                </article>
 
-                <h3>Personal Portfolio Website</h3>
-
-                <p>
-                    A full stack portfolio application developed using
-                    HTML, CSS, JavaScript, Node.js, Express.js and MongoDB.
-                </p>
-
+                <article class="project-card reveal">
+                    <div class="project-visual visual-three">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <span class="project-number">PROJECT 03</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags"><span>JavaScript</span><span>API</span></div>
+                        <h3>Weather Dashboard</h3>
+                        <p>A weather dashboard concept to explore API integration and dynamic data presentation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                            <span class="project-status"><i class="fa-solid fa-circle"></i> Starter Idea</span>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-        </div>
+            <p class="projects-note">
+                These are portfolio examples and project ideas, not claims of completed work.
+                Replace them with your real projects and repository links.
+            </p>
+        </section>
 
-    </section>
+        <!-- Education -->
+        <section class="section section-alt" id="education">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">MY ACADEMIC JOURNEY</p>
+                    <h2><span class="gradient-text">Education</span></h2>
+                    <p>Building a strong foundation in computer applications.</p>
+                </div>
 
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-marker"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">Current Program</span>
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <h4>STG First Grade College</h4>
+                            <p>Mandya University</p>
+                            <div class="timeline-tags">
+                                <span>Computer Science</span>
+                                <span>Programming</span>
+                                <span>Web Development</span>
+                            </div>
+                            <p class="timeline-note">Year of study: Update to II or III Year.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section gray">
+        <!-- Contact -->
+        <section class="section container" id="contact">
+            <div class="section-heading reveal">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2>Get In <span class="gradient-text">Touch</span></h2>
+                <p>Have an opportunity, project idea or just want to connect? Send me a message.</p>
+            </div>
 
-        <h2>Education</h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Let's build something <span class="gradient-text">great.</span></h3>
+                    <p>I'm interested in learning, collaborating on projects and connecting with fellow developers.</p>
 
-        <div class="education-card">
+                    <a href="mailto:lgururaj967@gmail.com" class="contact-item">
+                        <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
+                        <span><small>Email Me</small><strong>lgururaj967@gmail.com</strong></span>
+                    </a>
 
-            <h3>Bachulor of computer applications</h3>
+                    <a href="tel:+919844672625" class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                        <span><small>Call Me</small><strong>+91 9844672625</strong></span>
+                    </a>
 
-            <p>University of Mandya</p>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span><small>Based In</small><strong>Mandya, Karnataka, India</strong></span>
+                    </div>
+                </div>
 
-        </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <h3>Send a Message</h3>
 
-    </section>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>
+                    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
 
-        <h2>Contact Me</h2>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        Prepare Email <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="form-note" id="formStatus" aria-live="polite">
+                        This form opens your email app; it does not send messages directly.
+                    </p>
+                </form>
+            </div>
+        </section>
 
-        <form id="contactForm">
-
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required
-            >
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
-
-            <textarea
-                id="message"
-                placeholder="Enter your message"
-                required
-            ></textarea>
-
-            <button type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-        <p id="status"></p>
-
-    </section>
-
+        <!-- CTA -->
+        <section class="container cta-section reveal">
+            <div>
+                <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
+                <h2>Let's turn ideas into <span class="gradient-text">reality.</span></h2>
+            </div>
+            <a href="mailto:lgururaj967@gmail.com" class="btn btn-primary">
+                Contact Me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 Sanju A| Personal Portfolio
-        </p>
-
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">G<span>.</span>L</a>
+            <p>Designed & built by <strong>Gururaju L</strong></p>
+            <p>© <span id="currentYear"></span> All rights reserved.</p>
+            <a href="#home" class="back-to-top" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
